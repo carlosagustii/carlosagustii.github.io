@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // data es un array de los objetos 
         const products = data.products;
 
-        const product = products[productId - 1] || products[0];
+        const randomIndex = Math.floor(Math.random() * products.length);
+        const product = products[randomIndex]; //para sacar anuncios aleatorios
+
   
         // Buscamos la sección de publicidad en la página
         const adContainer = document.getElementById('publicidad');
